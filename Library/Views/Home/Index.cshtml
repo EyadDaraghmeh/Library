@@ -1,0 +1,29 @@
+﻿@model Books
+
+<table>
+    <tr>
+        <th>Welcom @ViewBag.Customers , these books that you have:</th>
+    </tr>
+    @foreach (Books b in ViewBag.Books)
+    {
+        <tr>
+            <td>@b.Name</td>
+        </tr>
+    }
+</table>
+<br />
+<a asp-controller="Home" asp-action="Logout" class="btn btn-outline-primary">Log Out</a>
+<br />
+
+If you want to ADD on your books, click here---><a asp-controller="Home" asp-action="EditBooks" class="btn btn-outline-primary">ADD</a><br />
+If you want to Delete on your books, click here---><a asp-controller="Home" asp-action="DeleteBook" class="btn btn-outline-primary">DEL</a>
+
+
+
+
+
+
+
+
+
+

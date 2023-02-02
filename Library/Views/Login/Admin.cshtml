@@ -1,0 +1,28 @@
+﻿@model Books
+<div class="ADD-BOOK">
+    <form asp-controller="Login" asp-action="AddBook" method="post">
+        <label  >Name:</label><br />
+        <input type="text" asp-for="Name" >
+        <br>
+        <label>Subject:</label><br />
+        <input type="text" asp-for="subject" >
+        <br>
+        <label>Author:</label><br />
+        <input type="text" asp-for="Author">
+        <br>
+
+        <button type="submit">Add Book</button>
+    </form>
+    <a asp-controller="Login" asp-action="Index" class="btn btn-block">Log Out</a>
+</div>
+
+<a asp-controller="Login" asp-action="BooksDetail">show</a>
+<style>
+    .ADD-BOOK {
+  width: 300px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+</style>

@@ -1,0 +1,18 @@
+﻿@model Books
+<table class="table-bordered">
+    <tr>
+    <th>Book Id</th>
+    <th>Book Name</th>
+    <th>Subject</th>
+    <th>Author</th>
+    </tr>
+    @foreach (Books books in ViewBag.allBooks)
+    {
+     <tr>
+         <td>@books.Id</td>
+         <td>@books.Name</td>
+         <td>@books.subject</td>
+         <td>@books.Author</td>
+     </tr>   
+    }
+</table>

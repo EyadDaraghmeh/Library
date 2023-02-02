@@ -1,0 +1,22 @@
+﻿@model Customers
+<div class="login">
+    <form asp-controller="Login" asp-action="Check" method="post">
+        <label >Email:</label><br />
+        <input type="text" asp-for="Email" required>
+        <br>
+        <label>Password:</label><br />
+        <input type="password" asp-for="Password">
+        <br>
+        <button type="submit">Login</button>
+    </form>
+    Need an account?<a asp-controller="Login" asp-action="SignUp">Sign up </a>
+</div>
+<style>
+    .login {
+        width: 300px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+    }
+
+</style>

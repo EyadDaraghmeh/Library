@@ -1,0 +1,17 @@
+﻿@model CustomersBooks
+To add book, choose the book you want and click on <strong>Add</strong>
+<form asp-controller="Home" asp-action="AddCustomerBooks" method="post">
+          <label asp-for="BooksId">Books</label>
+    <select id="select1" asp-for="BooksId">
+        @for (int i = 0; i < ViewBag.allBooks.Count; i++)
+        {
+                <option value=@ViewBag.allBooks[i].Id>@ViewBag.allBooks[i].Name</option>
+        }
+    </select>
+    <button type="submit">Add</button>
+    </form>
+
+
+
+
+  
